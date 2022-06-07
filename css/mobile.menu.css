@@ -1,0 +1,115 @@
+/* Sidebar Menu CSS Start here  */
+.header-bar {
+	background: #fff;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 1;
+	padding-top: 10px;
+	padding-left: 12px;
+	cursor: pointer;
+	margin-left: 50px;
+}
+.sidebar-close-btn {
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	text-align: center;
+	line-height: 54px;
+	border-radius: 50%;
+}
+.sidebar-close-btn button i{
+    color: #056c5f;
+}
+.header-bar span {
+	background: #87509c;
+	height: 2px;
+	width: 24px;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 6px;
+	padding-left: 9px;
+	transition: 0.3s;
+}
+.sidebar-menu ul li {
+	display: block;
+}
+.mobile-sidebar-inner {
+	position: fixed;
+	right: -370px;
+	top: 0;
+	padding: 30px;
+	width: 350px;
+	height: 100%;
+	background: #056c5f none repeat scroll 0 0;
+	overflow-y: scroll;
+	-webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+}
+.sidebar-menu ul li a {
+	padding: 13px 0;
+	display: block;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	text-transform: uppercase;
+	position: relative;
+}
+.sidebar-menu ul li.has-dropdown > a::after {
+	position: absolute;
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-width: 2px 0 0 2px;
+	border-style: solid;
+	border-color: initial;
+	right: 16px;
+	top: 50%;
+	-webkit-transform: rotate(-45deg) translateY(-50%);
+	transform: rotate(-45deg) translateY(-50%);
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	transition: all 0.3s ease-out;
+}
+.sidebar-menu ul li.has-dropdown a[aria-expanded="true"]::after {
+	-webkit-transform: rotate(-135deg) translateY(-50%);
+	transform: rotate(-135deg) translateY(-50%);
+}
+.sidebar-menu ul li a[aria-expanded="true"] {
+	color: #ffffff;
+}
+.sidebar-close-btn button {
+	border: none;
+	background: none;
+	color: #fff;
+	font-size: 23px;
+}
+.mobile-sidebar.info-opened {
+	visibility: visible;
+	opacity: 1;
+}
+.mobile-sidebar.info-opened .mobile-sidebar-inner {
+	right: -20px;
+}
+.body-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+.body-overlay.opened {
+	opacity: 1;
+	visibility: visible;
+}
